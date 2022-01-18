@@ -18,10 +18,24 @@ Exercise 2
 # - What can you deduce about the cause of the error?
 # The ifelse case in the for loop both ends with a return and therefore exits the loop after the first iteration.
 
+
 # PART 2: State Assumptions
 #
-# TODO: State your assumptions here or say them out loud to your partner ...
+# State your assumptions here or say them out loud to your partner ...
 # Make sure to be SPECIFIC about what each of your assumptions is!
+
+# "Firstly, we loop over the range of numbers within our list_of_nums - 2."
+# 
+# "Next, we check if the element with index i+1 (the next element) is 1 greater than our
+# current element and also if the element with index i+2 (the next, next element) is 2
+# greater than our current element.  This would mark our three consecutive numbers as
+# indicated by returning True and exiting the loop."
+# 
+# "If the above case fails, then it loops back to check the next set of three elements in
+# the list, is that what happens?... Nope, because we have an else statement that returns
+# False, it exits the loop immediately. This is what's causing our bug."
+# 
+# The easy solution is to remove the else statement entirely.
 
 def contains_3_consecutive(list_of_nums):
     """Return True if the list contains 3 consecutive numbers each increasing by 1."""
@@ -29,8 +43,8 @@ def contains_3_consecutive(list_of_nums):
         if (list_of_nums[i+1] == list_of_nums[i] + 1 and
             list_of_nums[i+2] == list_of_nums[i] + 2):
             return True
-        else:
-            return False
+        # else:
+        #     return False
 
     return False
 
