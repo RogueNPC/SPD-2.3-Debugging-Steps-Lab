@@ -4,12 +4,19 @@ Exercise 2
 
 # PART 1: Gather Information
 #
-# TODO: Gather information about the source of the error and paste your findings here. E.g.:
+# Gather information about the source of the error and paste your findings here. E.g.:
 # - What is the expected vs. the actual output?
-# - What error message (if any) is there?
-# - What line number is causing the error?
-# - What can you deduce about the cause of the error?
+# Expected output is False, actual output is False
+#                    True                    False
 
+# - What error message (if any) is there?
+# There is no error message.
+
+# - What line number is causing the error?
+# Line 33: the return statement.
+
+# - What can you deduce about the cause of the error?
+# The ifelse case in the for loop both ends with a return and therefore exits the loop after the first iteration.
 
 # PART 2: State Assumptions
 #
